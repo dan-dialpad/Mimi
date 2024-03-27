@@ -19,6 +19,7 @@ extension Message {
                 dateSent: messageDate,
                 sender: sender.asINPerson,
                 recipients: [me.asINPerson],
+                groupName: nil,
                 messageType: .text
             )
     }

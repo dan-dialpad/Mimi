@@ -24,7 +24,7 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
     // MARK: - INSendMessageIntentHandling
     func resolveRecipients(for intent: INSearchForMessagesIntent) async -> [INPersonResolutionResult] {
         guard let recipients = intent.recipients, recipients.count > 0 else {
-            return [INSendMessageRecipientResolutionResult.needsValue()]
+            return [INSendMessageRecipientResolutionResult.notRequired()]
         }
 
         var resolutionResults = [INSendMessageRecipientResolutionResult]()

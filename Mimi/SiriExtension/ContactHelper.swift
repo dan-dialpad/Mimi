@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Models
+import DataStore
 import Intents
 
 extension Contact {
@@ -16,11 +16,13 @@ extension Contact {
         let displayName = "\(first) \(last)"
         let image = URL(string: imageUrl).flatMap { INImage(url: $0) }
         let customIdentifier = id
+        let isMe = id == me.id
         return INPerson(personHandle: handle,
                         nameComponents: nameComponents,
                         displayName: displayName,
                         image: image,
                         contactIdentifier: nil,
-                        customIdentifier: customIdentifier)
+                        customIdentifier: customIdentifier,
+                        isMe: isMe)
     }
 }
