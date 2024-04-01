@@ -20,6 +20,8 @@
 		E94CD0DE2BB49E5100CB8AC8 /* DataStore in Frameworks */ = {isa = PBXBuildFile; productRef = E94CD0DD2BB49E5100CB8AC8 /* DataStore */; };
 		E94CD0E02BB49E5800CB8AC8 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = E94CD0DF2BB49E5800CB8AC8 /* Models */; };
 		E94CD0E22BB49E5800CB8AC8 /* DataStore in Frameworks */ = {isa = PBXBuildFile; productRef = E94CD0E12BB49E5800CB8AC8 /* DataStore */; };
+		E9CCB8642BBAF70000AF70E6 /* MimiAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCB8632BBAF70000AF70E6 /* MimiAppDelegate.swift */; };
+		E9CCB8662BBAF71600AF70E6 /* ContactsRegistrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CCB8652BBAF71600AF70E6 /* ContactsRegistrar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E94CD0CD2BB3659400CB8AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94CD0D52BB4423100CB8AC8 /* MessageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageHelper.swift; sourceTree = "<group>"; };
 		E94CD0D62BB4423100CB8AC8 /* ContactHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactHelper.swift; sourceTree = "<group>"; };
+		E9CCB8632BBAF70000AF70E6 /* MimiAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimiAppDelegate.swift; sourceTree = "<group>"; };
+		E9CCB8652BBAF71600AF70E6 /* ContactsRegistrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsRegistrar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				E94CD0872BB202F800CB8AC8 /* ContentView.swift */,
 				E94CD0892BB202FA00CB8AC8 /* Assets.xcassets */,
 				E94CD08B2BB202FA00CB8AC8 /* Preview Content */,
+				E9CCB8632BBAF70000AF70E6 /* MimiAppDelegate.swift */,
+				E9CCB8652BBAF71600AF70E6 /* ContactsRegistrar.swift */,
 			);
 			path = Mimi;
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CCB8662BBAF71600AF70E6 /* ContactsRegistrar.swift in Sources */,
+				E9CCB8642BBAF70000AF70E6 /* MimiAppDelegate.swift in Sources */,
 				E94CD0882BB202F800CB8AC8 /* ContentView.swift in Sources */,
 				E94CD0862BB202F800CB8AC8 /* MimiApp.swift in Sources */,
 			);
@@ -429,6 +437,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,6 +470,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
