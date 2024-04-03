@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct MimiApp: App {
+    @UIApplicationDelegateAdaptor(MimiAppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

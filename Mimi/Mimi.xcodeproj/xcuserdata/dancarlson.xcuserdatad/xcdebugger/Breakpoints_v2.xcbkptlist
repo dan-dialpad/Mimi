@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "45B3E027-9C16-4D39-A9ED-5A57AD55F342"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SiriExtension/IntentHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "handle(intent:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - ecd8612406522633"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - c75f039739956a35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "772">
+               </Location>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - 2c5c46897566f239"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - ecd8612406522652"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - c75f039739956a54"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "772">
+               </Location>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - 2c5c46897566f258"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - ecd86124065225d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "484">
+               </Location>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - c75f0397399569d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "772">
+               </Location>
+               <Location
+                  uuid = "36249151-58C2-46AE-9027-D2C0BC4AE263 - 2c5c46897566f1dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "628">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F1096478-C334-4AC0-BE29-8C786E98CAB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SiriExtension/IntentHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "confirm(intent:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F1096478-C334-4AC0-BE29-8C786E98CAB1 - 2eb9d3058704f170"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.confirm(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "F1096478-C334-4AC0-BE29-8C786E98CAB1 - 2eb9d3058704f113"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.confirm(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "F1096478-C334-4AC0-BE29-8C786E98CAB1 - 2eb9d3058704ee97"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.confirm(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB59E12C-920A-4E1D-8A60-8A2B30F7DCD5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SiriExtension/IntentHandler.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "handle(intent:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EB59E12C-920A-4E1D-8A60-8A2B30F7DCD5 - ecd861240652274b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "EB59E12C-920A-4E1D-8A60-8A2B30F7DCD5 - ecd861240652276a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "EB59E12C-920A-4E1D-8A60-8A2B30F7DCD5 - ecd86124065226ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SiriExtension.IntentHandler.handle(intent: __C.INSendMessageIntent) async -&gt; __C.INSendMessageIntentResponse"
+                  moduleName = "SiriExtension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dancarlson/Documents/Source/Mimi/Mimi/SiriExtension/IntentHandler.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "140">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

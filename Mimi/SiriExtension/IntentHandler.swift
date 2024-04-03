@@ -8,30 +8,82 @@
 import Intents
 import DataStore
 
-// You can test your example integration by saying things to Siri like:
-// "Send a message using <myApp>"
-// "Send a message using <myApp>"
-
 class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessagesIntentHandling, INSetMessageAttributeIntentHandling {
 
     override func handler(for intent: INIntent) -> Any {
         // This is the default implementation.  If you want different objects to handle different intents,
         // you can override this and return the handler you want for that particular intent.
 
+        print("\n***START\n\(Date().timeIntervalSince1970)\n\(String(describing:intent))\n***END")
         return self
     }
 
     // MARK: - INSendMessageIntentHandling
-    func resolveRecipients(for intent: INSearchForMessagesIntent) async -> [INPersonResolutionResult] {
-        guard let recipients = intent.recipients, recipients.count > 0 else {
-            return [INSendMessageRecipientResolutionResult.notRequired()]
+
+    func resolveRecipients(for intent: INSendMessageIntent) async -> [INSendMessageRecipientResolutionResult] {
+        var conversationIdentifiers: [String] = []
+        if let conversationIdentifier = intent.conversationIdentifier {
+            conversationIdentifiers = [conversationIdentifier]
         }
+        let inPersonsFound = await resolveRecipients(for: intent.recipients, conversationIdentifiers: conversationIdentifiers)
 
         var resolutionResults = [INSendMessageRecipientResolutionResult]()
+        switch inPersonsFound.count {
+        case 2  ... Int.max:
+            // We need Siri's help to ask user to pick one from the matches.
+            resolutionResults += [INSendMessageRecipientResolutionResult.disambiguation(with: inPersonsFound)]
+        case 1:
+            // We have exactly one matching contact
+            guard let person = inPersonsFound.first else { break }
+            resolutionResults += [INSendMessageRecipientResolutionResult.success(with: person)]
+        case 0:
+            resolutionResults += [INSendMessageRecipientResolutionResult.unsupported()]
+
+        default:
+            resolutionResults += [INSendMessageRecipientResolutionResult.unsupported()]
+        }
+        return resolutionResults
+    }
+
+//    func resolveRecipients(for intent: INSearchForMessagesIntent) async -> [INPersonResolutionResult] {
+//        let inPersonsFound = await resolveRecipients(for: intent.recipients, conversationIdentifiers: intent.conversationIdentifiers)
+//        
+//        var resolutionResults = [INPersonResolutionResult]()
+//        switch inPersonsFound.count {
+//        case 2  ... Int.max:
+//            // We need Siri's help to ask user to pick one from the matches.
+//            resolutionResults += [INPersonResolutionResult.disambiguation(with: inPersonsFound)]
+//        case 1:
+//            // We have exactly one matching contact
+//            guard let person = inPersonsFound.first else { break }
+//            resolutionResults += [INPersonResolutionResult.success(with: person)]
+//        case 0:
+//            resolutionResults += [INPersonResolutionResult.unsupported()]
+//
+//        default:
+//            resolutionResults += [INPersonResolutionResult.unsupported()]
+//        }
+//        return resolutionResults
+//    }
+
+    private func resolveRecipients(for recipients: [INPerson]?, conversationIdentifiers: [String]?) async -> [INPerson] {
+
+        if let conversationIdentifier = conversationIdentifiers?.first {
+            do {
+                if let foundContact = try await ContactClient.live.contactwithID(conversationIdentifier) {
+                    return [foundContact.asINPerson]
+                }
+            } catch { }
+        }
+
+        guard let recipients = recipients, recipients.count > 0 else {
+            return []
+        }
+
+
         do
         {
             for recipient in recipients {
-
                 var appContacts: [Contact] = []
                 if let customIdentifier = recipient.customIdentifier {
                     do {
@@ -49,33 +101,19 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
                     appContacts = foundContacts
                 }
                 guard appContacts.count > 0 else {
-                    resolutionResults += [INSendMessageRecipientResolutionResult.unsupported()]
-                    continue
+                    return []
                 }
                 let matchingContacts = appContacts.compactMap { $0.asINPerson }
-                switch matchingContacts.count {
-                case 2  ... Int.max:
-                    // We need Siri's help to ask user to pick one from the matches.
-                    resolutionResults += [INSendMessageRecipientResolutionResult.disambiguation(with: matchingContacts)]
-
-                case 1:
-                    // We have exactly one matching contact
-                    resolutionResults += [INSendMessageRecipientResolutionResult.success(with: recipient)]
-
-                case 0:
-                    // We have no contacts matching the description provided
-                    resolutionResults += [INSendMessageRecipientResolutionResult.unsupported()]
-
-                default:
-                    break
-
-                }
+                return matchingContacts
             }
         } catch { }
-        return resolutionResults
+        return []
     }
 
     func resolveContent(for intent: INSendMessageIntent) async -> INStringResolutionResult {
+        
+
+
         if let text = intent.content, !text.isEmpty {
             return INStringResolutionResult.success(with: text)
         } else {
@@ -130,6 +168,7 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
     // MARK: - INSearchForMessagesIntentHandling
     func handle(intent: INSearchForMessagesIntent) async -> INSearchForMessagesIntentResponse {
 
+//        print("INSearchForMessagesIntent")
         // Implement your application logic to find a message that matches the information in the intent.
         let userActivity = NSUserActivity(activityType: NSStringFromClass(INSearchForMessagesIntent.self))
         let response = INSearchForMessagesIntentResponse(code: .success, userActivity: userActivity)
@@ -158,6 +197,7 @@ class IntentHandler: INExtension, INSendMessageIntentHandling, INSearchForMessag
     // MARK: - INSetMessageAttributeIntentHandling
     func handle(intent: INSetMessageAttributeIntent) async -> INSetMessageAttributeIntentResponse {
 
+        print("INSetMessageAttributeIntent: \(intent)")
         let userActivity = NSUserActivity(activityType: NSStringFromClass(INSetMessageAttributeIntent.self))
 
         guard intent.attribute == .read, let messageId = intent.identifier else {
